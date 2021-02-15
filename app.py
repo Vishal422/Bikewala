@@ -1,7 +1,9 @@
 from flask import Flask, request, make_response, redirect, render_template
 from flask import Flask, render_template, request
-from flask import jsonify
-import jsonify
+#from flask import jsonify
+#from flask_jsonpify import jsonify
+
+#import jsonify
 import requests
 import pickle
 import numpy as np
@@ -18,21 +20,22 @@ def predict():
     if request.method == 'POST':
        no_year = int(request.form['no_year'])
        Present_Price=int(request.form['Present_Price'])
-       owner=request.form['owner']
        Km_driven=int(request.form['Km_driven'])
        Km_driven2=np.log(Km_driven)
-       
+
+
        Seller_Type_Individual=request.form['Seller_Type_Individual']
        
        if(Seller_Type_Individual=='Individual'):
          Seller_Type_Individual=1
        else:
          Seller_Type_Individual=0
+         
        
-       prediction=model.predict([[Present_Price, Km_driven,Km_driven2, no_year, Seller_Type_Individual,owner]])
+       prediction=model.predict([[Present_Price, Km_driven,Km_driven2, Seller_Type_Individual]])
        output=round(prediction[0],2)
        if output<0:
-           return render_template('index.html',prediction_texts="Sorry you cannot sell this Bike")
+           return render_template('index.html',prediction_texts="Sorry you cannot sell this bike")
        else:
             return render_template('index.html',prediction_text="You Can Sell The Bike at {}".format(output))
     else:
@@ -40,5 +43,4 @@ def predict():
 
 if __name__=="__main__":
     app.run(debug=True)
-
 
