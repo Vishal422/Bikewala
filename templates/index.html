@@ -37,10 +37,15 @@
     <div style="color:whitesmoke">
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
+            <h3>Year</h3><input id="first" name="year" type="number ">
             <h3>What is the Showroom Price?</h3><br><input id="second" name="Present_Price" required="required">
             <h3>How Many Kilometers Drived?</h3><input id="third" name="Km_driven" required="required">
             <h3>How Many Year old bike?</h3><input id="fourth" name="no_year" required="required">
-
+            <h3>How Many owner of bike?</h3><br><select name="How many owner of bike" id="resea" required="required">
+                <option value="First owner">1</option>
+                <option value="second owner">2</option>
+                <option value="third owner">3</option>
+                </select>
             <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
@@ -63,8 +68,7 @@
 
 
         body {
-            background-image : 'Perak Front Three-Quarter.jpg' ;
-            background-color : Black;
+        background-color : Black;
             text-align: left;
             padding: 0px;
         }
