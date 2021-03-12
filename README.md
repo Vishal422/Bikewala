@@ -2,7 +2,7 @@
 Amazing work with Machine Lerning
 
 
-BIKE PRICE PREDICTION
+###BIKE PRICE PREDICTION###
  In this project, I will take you through the task of Bike Price Prediction with Machine Learning by using the Python programming language. Bike Price prediction is the task of Machine Learning so I will be using the   Random Forest   Algorithms in Python.
  Aim: -   To predict price of the Old bike Using Machine learning techniques with the help of MOTORCYCLE dataset CSV file.  I have collected data set from Kaggle data set which is Domain name is BIKEWALE [MOTORCYCLE]
 
