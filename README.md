@@ -8,8 +8,11 @@ Amazing work with Machine Lerning
 
 
 Lets start projects, 
+The first step is create a create folder and create conda environment 
+Then set the Path of the folder with file 
+Then create a new file which Jupyter notebook 
 
-The first step is create a create folder and create conda environment  
+
 1.	Import all library’s   which have we need 
 •	import pandas as pd
 •	import NumPy as np
