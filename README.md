@@ -1,5 +1,5 @@
 # Bikewala
-Amazing work with Machine Lerning
+Amazing work with Machine learning
 
 
 ###BIKE PRICE PREDICTION###
