@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikewala</title>
+    <style type="text/css">
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Calibri, Arial, sans-serif;
+            color: #333;
+        }
+
+
+        .container {
+            background: ghostwhite;
+            width: 50%;
+            padding: 40px;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #008b8b;
+        }
+
+            
+       h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .prediction {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Welcome to Bikewala</h1>
+        <p>Your bike price prediction solution</p>
+    </div>
+
+    <div class="container">
+        <form action="/predict" method="post">
+            <h2>Predictive Analysis</h2>
+            <h3>Year</h3><input name="year" type="number">
+            <h3>Showroom Price</h3><input name="Present_Price" required>
+            <h3>Kilometers Driven</h3><input name="Km_driven" required>
+            <h3>Years Old</h3><input name="no_year" required>
+            <h3>Number of Owners</h3><input name="owner" required>
+            <h3>Seller Type</h3>
+            <select name="Seller_Type_Individual" required>
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <br><br>
+            <button type="submit">Predict Bike Selling Price</button>
+        </form>
+        <div class="prediction">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+    </div>
+</body>
+
+</html>
